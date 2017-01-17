@@ -1,4 +1,5 @@
-FROM ubuntu:xenial
+# Forked from
+FROM kylemanna/bitcoind
 
 MAINTAINER Siriwat K.
 # Extracted (bitcoind) from 
@@ -7,14 +8,5 @@ MAINTAINER Siriwat K.
 # bitcoind apt-key from
 # https://hub.docker.com/r/kylemanna/bitcoind/~/dockerfile/
 
-# APT common and Bitcoind
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8842ce5e \
-        && echo "deb http://ppa.launchpad.net/bitcoin/bitcoin/ubuntu xenial main" > /etc/apt/sources.list.d/bitcoin.list \
-        && apt-get update \
-        && apt-get install -y curl bitcoind \
-        && rm -rf /var/cache/apt
-
-COPY .bitcoin/bitcoin.conf /root/.bitcoin/
-
-EXPOSE 8332 8333 18332 18333
-CMD ["bitcoind"]
+# Configuration
+COPY .bitcoin/bitcoin.conf /bitcoin/.bitcoin/
