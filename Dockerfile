@@ -31,12 +31,13 @@ RUN cd /opt \
         && ./build_release.sh
 
 # Set the locale
-RUN locale-gen en_US.UTF-8  
-ENV LANG en_US.UTF-8  
-ENV LANGUAGE en_US:en  
+RUN locale-gen en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 # SSL cert
+# http://blog.justin.kelly.org.au/how-to-create-a-self-sign-ssl-cert-with-no-pa/
 RUN cd /opt/bitex \
         && mkdir ssl && cd ssl \
         && openssl genrsa -out server.key 1024 \
