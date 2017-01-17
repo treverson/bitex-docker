@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker build -t mxchg .
+# Bitex
+docker build -t bitex .
