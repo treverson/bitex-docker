@@ -1,3 +1,4 @@
+api_receive: python2.7 apps/api_receive/main.py --config=/opt/bitex/config/api_receive.conf
 engine: python2.7 apps/trade/main.py --config=/opt/bitex/config/trade.conf
 gateway: python2.7 apps/ws_gateway/main.py --config=/opt/bitex/config/ws_gateway.conf
-api_receive: python2.7 apps/api_receive/main.py --config=/opt/bitex/config/api_receive.conf
+#mailer: python2.7 apps/mailer/main.py --config=/opt/bitex/config/mailer.conf
