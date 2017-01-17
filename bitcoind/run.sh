@@ -4,11 +4,13 @@
 # With added a configuration for bitex
 
 docker volume create --name=bitcoind-data &&
-docker run -v bitcoind-data:/bitcoin --rm -it --name=bitcoind-node \
+docker run -v bitcoind-data:/bitcoin --rm -it \
     --net=host \
     -p 8333:8333 \
     -p 8332:8332 \
     -p 18332:18332 \
     -p 18333:18333 \
-    -v `pwd`/.bitcoin:/bitcoin/.bitcoin \
-    kylemanna/bitcoind bitcoind
+    bitcoind bitcoind
+
+#-v `pwd`/.bitcoin/bitcoin.conf:/bitcoin/.bitcoin/bitcoin.conf \
+#kylemanna/bitcoind bitcoind
