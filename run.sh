@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Running Bitcoind
+./bitcoind/run.sh
+
+# Running Bitex
 docker run --rm -it \
     --net=host \
     -v /home/stylix/codes/mxchg_docker/etc/nginx/conf.d/bitex.conf:/etc/nginx/conf.d/bitex.conf \
