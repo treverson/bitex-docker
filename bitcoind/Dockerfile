@@ -8,5 +8,10 @@ MAINTAINER Siriwat K.
 # bitcoind apt-key from
 # https://hub.docker.com/r/kylemanna/bitcoind/~/dockerfile/
 
+# Curl
+RUN apt-get update \
+        && apt-get install -y curl \
+        && rm -rf /var/cache/apt
+
 # Configuration
 COPY .bitcoin/bitcoin.conf /bitcoin/.bitcoin/
