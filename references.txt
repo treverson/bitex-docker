@@ -1,0 +1,17 @@
+1. Most of things
+https://github.com/blinktrade/bitex/wiki/HOW-TO-DEPLOY-BLINKTRADE-ON-GOOGLE-COMPUTE-ENGINE
+
+2. Running bitcoind
+2.1 Some steps (5) to run bitcoind
+https://github.com/peatio/peatio/blob/db0667ab2788fd7c3ca75b4fb024ef90e818afac/doc/setup-local-ubuntu.md
+2.2 Bitcoind docker solution
+https://github.com/kylemanna/docker-bitcoind
+
+3. Grap Clebson repo that still contains api_receive app
+https://github.com/bzero/bitex
+
+4. Working on API receive
+https://github.com/blinktrade/bitex/wiki/HOW-TO-INSTALL-API-RECEIVE
+
+5. Exchange frontend
+https://github.com/blinktrade/frontend
