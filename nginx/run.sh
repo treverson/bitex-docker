@@ -2,4 +2,4 @@
 
 docker run --rm -it \
     --net=host \
-    nginx
+    nginx1

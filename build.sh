@@ -9,7 +9,7 @@ docker build -t bitcoind . &&
 cd .. &&
 echo "=========== Nginx ===========" &&
 cd nginx &&
-docker build -t nginx . &&
+docker build -t nginx1 . &&
 
 # Bitex
 cd .. &&
