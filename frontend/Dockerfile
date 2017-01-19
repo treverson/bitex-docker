@@ -37,4 +37,9 @@ COPY start.sh /opt/frontend/
 RUN rm -rf /opt/frontend/_plugins/ext.rb
 
 WORKDIR /opt/frontend
+
+# jekyll http 4000
+#
+EXPOSE 4000
+
 CMD ["./start.sh"]

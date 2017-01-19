@@ -35,4 +35,11 @@ COPY opt/bitex/Procfile /opt/bitex/
 COPY opt/bitex/start.sh /opt/bitex/
 
 WORKDIR /opt/bitex
+
+# api_receive 9943
+# zmq 5757 5758
+# ws_gateway 8445
+#
+EXPOSE 9943 5757 5758 8445
+
 CMD ["./start.sh"]

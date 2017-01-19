@@ -15,3 +15,9 @@ RUN apt-get update \
 
 # Configuration
 COPY .bitcoin/bitcoin.conf /bitcoin/.bitcoin/
+
+# bitcoind
+# realmode 8332
+# testnet 18332
+#
+EXPOSE 18332
