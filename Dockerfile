@@ -17,15 +17,31 @@ RUN apt-get update \
         && pip install honcho
 
 # Blinktrade and Requirements
-# && git clone https://github.com/blinktrade/bitex.git bitex \
+# Original https://github.com/blinktrade/bitex.git \
+# Bzero https://github.com/bzero/bitex.git \
 RUN cd /opt \
         && git clone https://github.com/bzero/bitex.git bitex \
         && cd /opt/bitex \
         && pip install -r requirements.txt
 
+# Pyblinktrade (use with original bitex)
+#RUN cd /opt \
+#        && git clone https://github.com/blinktrade/pyblinktrade.git pyblinktrade \
+#        && cd /opt/pyblinktrade \
+#        && chmod +x setup.py \
+#        && ./setup.py install
+
+# blinktrade_api_receive (use with original bitex)
+# https://github.com/blinktrade/blinktrade_api_receive.git
+#RUN cd /opt/bitex/apps \
+#        && git clone https://github.com/blinktrade/blinktrade_api_receive.git api_receive \
+#        && cd /opt/bitex/apps/api_receive \
+#        && chmod +x setup.py \
+#        && ./setup.py install
+
 # Configuration
 # Bitex
-RUN mkdir /opt/bitex/logs
+RUN mkdir -p /opt/bitex/logs
 COPY opt/bitex/config/api_receive.conf /opt/bitex/config/
 COPY opt/bitex/config/trade.conf /opt/bitex/config/
 COPY opt/bitex/config/ws_gateway.conf /opt/bitex/config/
