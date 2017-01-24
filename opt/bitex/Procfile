@@ -1,8 +1,9 @@
-# Bzero
-api_receive: python2.7 apps/api_receive/main.py --config=/opt/bitex/config/api_receive.conf
-engine: python2.7 apps/trade/main.py --config=/opt/bitex/config/trade.conf
-# Original bitex
-#api_receive: python2.7 apps/api_receive/blinktrade_api_receive/main.py --config=/opt/bitex/config/api_receive.ini
-#engine: python2.7 apps/trade/main.py --config=/opt/bitex/config/trade.ini
-gateway: python2.7 apps/ws_gateway/main.py --config=/opt/bitex/config/ws_gateway.conf
-#mailer: python2.7 apps/mailer/main.py --config=/opt/bitex/config/mailer.conf
+#Bzero
+#api_receive: python2.7 apps/api_receive/main.py --config=/opt/bitex/config/api_receive.conf
+#engine: python2.7 apps/trade/main.py --config=/opt/bitex/config/trade.conf
+#gateway: python2.7 apps/ws_gateway/main.py --config=/opt/bitex/config/ws_gateway.conf
+#Original
+api_receive: python2.7 apps/api_receive/blinktrade_api_receive/main.py --config=/opt/bitex/config/api_receive.conf
+engine: python2.7 apps/trade/main.py --instance=trade --config=/opt/bitex/config/bitex.conf
+gateway: python2.7 apps/ws_gateway/main.py --instance=ws_gateway --config=/opt/bitex/config/bitex.conf
+#mailer: python2.7 apps/mailer/main.py --instance=mailer --config=/opt/bitex/config/bitex.conf
