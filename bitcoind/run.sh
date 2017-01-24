@@ -3,6 +3,7 @@
 # Forked from https://github.com/kylemanna/docker-bitcoind
 # With added a configuration for bitex
 
+docker volume rm bitcoind-data
 docker volume create --name=bitcoind-data &&
 docker run -v bitcoind-data:/bitcoin --rm -it \
     --net=host \
